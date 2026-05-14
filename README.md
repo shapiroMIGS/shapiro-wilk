@@ -1,24 +1,20 @@
+# Test de normalité de Shapiro-Wilk
+
+Projet M1 Statistiques — Université de Bourgogne Europe
+
+## Auteurs
+- OUSSENI Bicharati
+- KOBA Kami
+
+## Description
+
+Ce projet étudie le test de normalité de Shapiro-Wilk (1965). L'objectif est d'expliquer la construction de la statistique $W$, de simuler numériquement sa distribution par méthode de Monte Carlo ($N_{sim} = 10^6$), et de reconstruire la table des quantiles critiques.
+
 ## Résultats principaux
 
-- Erreur moyenne sur les quantiles : **0,004**
-- Le test est très puissant face aux lois asymétriques dès n petit
-- Pour la loi uniforme, il faut **n ≥ 90** pour être fiable
+- Erreur moyenne sur les quantiles reconstruits : **0,004**
+- Le test est très puissant face aux lois asymétriques (ex : loi exponentielle) dès les petits échantillons
+- Pour la loi uniforme, une taille **n ≥ 90** est nécessaire pour être fiable
+- Application sur *Iris setosa* (Fisher, 1936) : $W = 0{,}9788$, p-valeur $= 0{,}423$ → normalité non rejetée
 
-## Application — Iris de Fisher
-
-Le test a été appliqué aux longueurs de sépales de l'espèce *Iris setosa*
-(50 observations, Fisher 1936) :
-
-| Statistique | Valeur |
-|-------------|--------|
-| W_obs | 0,9788 |
-| p-valeur | 0,423 |
-
-**Conclusion** : la p-valeur étant largement supérieure à 5%, on ne rejette pas H₀.
-Les données sont compatibles avec une distribution normale.
-
-## Références
-
-Shapiro, S.S. & Wilk, M.B. (1965). *An analysis of variance test for normality*. Biometrika, 52(3-4), 591-611.
-
-Shapiro, S.S. & Francia, R.S. (1972). *An approximate analysis of variance test for normality*. Journal of the American Statistical Association.
+## Contenu du dépôt
